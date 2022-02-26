@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/questionFragment">
+
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="cod.with.cal.quizapp.fragment.QuestionFragment"
+        android:label="QuestionFragment" >
+        <action
+            android:id="@+id/action_questionFragment_to_cheatFragment"
+            app:destination="@id/cheatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cheatFragment"
+        android:name="cod.with.cal.quizapp.fragment.CheatFragment"
+        android:label="CheatFragment" >
+        <action
+            android:id="@+id/action_cheatFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+    </fragment>
+</navigation>
